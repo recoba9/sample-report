@@ -61,21 +61,22 @@ object Main {
 
     val con = connect(args)
 
-    val st = con.prepareStatement("select nvl(sum(s.price * s.quantity *" +
-                                  "           (" +
-                                  "             select max(rate) -- in case there are many rates for one date for the product\n" +
-                                  "             from   profit_percentage pp" +
-                                  "             where  pp.productid = s.productid" +
-                                  "                    and pp.\"date\" = (select max(pp2.\"date\") " +
-                                  "                                       from   profit_percentage pp2" +
-                                  "                                       where  pp2.\"date\" <= s.\"date\" " +
-                                  "                                              and pp2.productid = s.productid" +
-                                  "                                       )" +
-                                  "           )" +
-                                  "          ), 0) as total_profit " +
-                                  "from   sales s " +
-                                  "where  s.\"date\" >= to_date(?, ?)" +
-                                  "       and s.\"date\" <= to_date(?, ?)")
+    val st = con.prepareStatement("select nvl(sum(s.price * s.quantity *\n" +
+      "                                         (\n" +
+      "                                          select max(rate) -- in case there are many rates for one date for the product\n" +
+      "                                          from   profit_percentage pp\n" +
+      "                                          where  pp.productid = s.productid\n" +
+      "                                                 and pp.\"date\" = (\n" +
+      "                                                                    select max(pp2.\"date\")\n" +
+      "                                                                    from   profit_percentage pp2\n" +
+      "                                                                    where  pp2.\"date\" <= s.\"date\"\n" +
+      "                                                                           and pp2.productid = s.productid\n" +
+      "                                                                   )\n" +
+      "                                         )\n" +
+      "                                      ), 0) as total_profit\n" +
+      "                            from   sales s\n" +
+      "                            where  s.\"date\" >= to_date(?, ?)\n" +
+      "                                   and s.\"date\" <= to_date(?, ?)")
     st.setString(1, reportStart)
     st.setString(2, pattern)
     st.setString(3, reportEnd)

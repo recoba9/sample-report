@@ -4,11 +4,11 @@
     <root id="archive" name="profit_totals.jar">
       <element id="module-output" name="profit_totals" />
       <element id="module-output" name="profit_totals-build" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/bluecatcode/time/joda-time-2.3-extended/1.1.0/joda-time-2.3-extended-1.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/joda-time/joda-time/2.3/joda-time-2.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/oracle-driver-ojdbc-12.1.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/slf4j-api-1.7.7.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/hynnet/oracle-driver-ojdbc/12.1.0.2/oracle-driver-ojdbc-12.1.0.2.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/bluecatcode/time/joda-time-2.9.1-extended/1.1.0/joda-time-2.9.1-extended-1.1.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/joda-time/joda-time/2.9.1/joda-time-2.9.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.sbt/boot/scala-2.10.4/lib/jansi.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.sbt/boot/scala-2.10.4/lib/jline.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.sbt/boot/scala-2.10.4/lib/scala-compiler.jar" path-in-jar="/" />
